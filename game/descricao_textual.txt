@@ -1,0 +1,3 @@
+CounterShot é um jogo de plataforma 2D; o jogador controlará um personagem armado que deve eliminar inimigos no mapa. 
+Os inimigos derrotados deixam cair moedas que podem ser coletadas pelo jogador. Você tem que permanecer vivo e juntar 
+o máximo de dinheiro possível. Uma variedade de inimigos e obstáculos diferentes estão no mapa.
