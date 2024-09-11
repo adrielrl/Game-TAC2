@@ -7,7 +7,7 @@ pygame.init()
 
 # Criando a janela
 tela = pygame.display.set_mode((LARGURA, ALTURA))
-pygame.display.set_caption("Tiro de Cima")
+pygame.display.set_caption("CounterShot")
 relogio = pygame.time.Clock()
 
 # Carregar imagens
