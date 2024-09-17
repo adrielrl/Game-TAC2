@@ -1,45 +1,68 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>430</x><y>460</y><w>180</w><h>110</h></coordinates><panel_attributes>Personagem
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>320</x><y>280</y><w>180</w><h>230</h></coordinates><panel_attributes>Jogador
 --
+posicao: Vector2
+image: Surface
+rect: Rect
+velocidade: int 
+vida_jogador: int 
+tempo_tiro: int 
+deslocamento_arma: Vector2
+--
+get_dano(valor_dano)
+rotacao_jogador()
+entrada_usuario()
+disparar()
+movimentar()
+update()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>370</y><w>170</w><h>190</h></coordinates><panel_attributes>Inimigo
+--
+posicao: Vector2
+image: Surface
+rect: Rect
+velocidade: int 
+vida: int
+dano:int
+--
+caçar_jogador()
+verificar_colisao_jogador()
+receber_dano(dano)
+update()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>310</y><w>150</w><h>90</h></coordinates><panel_attributes>Camera
+--
+deslocamento: Vector2
 
 --
-mover()
-atirar()
-coletar_moeda()
-receber_dano()
+desenhar_customizado()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>320</y><w>170</w><h>110</h></coordinates><panel_attributes>Inimigo
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>150</y><w>210</w><h>90</h></coordinates><panel_attributes>Grupo_todos_sprites
 --
-- 
-
+bala: Bala
+jogador: Jogador
+inimigo: Inimigo
 --
-mover()
-receber_dano()
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>110</x><y>310</y><w>210</w><h>150</h></coordinates><panel_attributes>Moeda
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>100</y><w>210</w><h>150</h></coordinates><panel_attributes>Jogo
 --
-- tamXY: tuple (int, int)
-- posXY: tuple (int, int)
-
---
-desaparecer()
-
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>80</y><w>210</w><h>150</h></coordinates><panel_attributes>Sprite
---
-- tamXY: tuple (int, int)
-- posXY: tuple (int, int)
-
---
-animation()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>220</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>220</y><w>160</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;240</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>220</y><w>310</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;290;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>80</y><w>210</w><h>150</h></coordinates><panel_attributes>Game
---
-inimigos
-personagens
-moedas
+jogador: Jogador
+grupo_inimigos: Group
+grupo_balas: Group
+camera: Camera
+grupo_todos_sprites: Group
 --
 iniciar()
-atualizar()
+update()
+verificar_colisao()
 pausar()
-finalizar()
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>220</y><w>110</w><h>260</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;240</additional_attributes></element></diagram>
+finalizar()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>20</y><w>210</w><h>170</h></coordinates><panel_attributes>Bala
+--
+x: float
+y: float
+angulo: float
+velocidade: int
+x_vel: float
+y_vel: float
+tempo_vida_bala: int
+--
+movimento_bala()
+update()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>340</y><w>130</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;110;20</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>80</y><w>130</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>110;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>200</y><w>130</w><h>180</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;160;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>230</y><w>120</w><h>160</h></coordinates><panel_attributes></panel_attributes><additional_attributes>100;140;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>170</y><w>170</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element></diagram>
